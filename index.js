@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import {
   StyleSheet,
-  Navigator,
   View,
   Platform,
   Text,
@@ -9,7 +8,7 @@ import {
 } from 'react-native';
 
 import EventEmitter from 'react-native/Libraries/EventEmitter/EventEmitter';
-
+import { Navigator } from 'react-native-deprecated-custom-components'
 import NavBarContainer from './components/NavBarContainer';
 import * as Styles from './styles';
 import aspect from 'aspect-js';
