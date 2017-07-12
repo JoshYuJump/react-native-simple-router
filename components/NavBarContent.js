@@ -185,7 +185,7 @@ class NavBarContent extends React.Component {
 
     if (Platform.OS === 'ios' || this.props.route.leftCorner || this.props.route.index > 0) {
       leftCorner = (
-        <View style={styles.corner}>
+        <View style={[styles.corner]}>
           {leftCornerContent}
         </View>
       );
@@ -211,9 +211,9 @@ class NavBarContent extends React.Component {
       );
     }
 
-    if (Platform.OS === 'ios' || this.props.route.rightCorner || this.props.route.index > 0) {
+    if (Platform.OS === 'ios'||Platform.OS === 'android' || this.props.route.rightCorner || this.props.route.index > 0) {
       rightCorner = (
-        <View style={styles.corner}>
+        <View style={[styles.corner]}>
           {rightCornerContent}
         </View>
       );
@@ -253,7 +253,7 @@ class NavBarContent extends React.Component {
     }
 
     titleComponent = (
-      <View style={{ flex: this.props.route.titleProps.flex ? this.props.route.titleProps.flex : 3 }}>
+      <View style={{ flex: this.props.route.titleProps.flex ? this.props.route.titleProps.flex : 3}}>
         {titleContent}
       </View>
     );
